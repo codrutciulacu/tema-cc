@@ -18,5 +18,10 @@ spec:
       - name: course-site
         imagePullPolicy: Never
         image: course-site:latest
+        env:
+           - name: URL
+             value: "http://localhost"
+           - name: BASE_URL
+             value: "/cloud-courses/"
         ports:
         - containerPort: 80
