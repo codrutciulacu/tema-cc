@@ -11,5 +11,7 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port: 3000
+      name: course-http
   selector:
     {{- include "app.selectorLabels" . | nindent 4 }}
