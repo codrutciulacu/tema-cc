@@ -14,9 +14,9 @@ spec:
       labels:
         app: nginx-app
     spec:
-      imagePullPolicy: IfNotPresent
       containers:
       - name: course-site
+        imagePullPolicy: IfNotPresent
         image: course-site
         ports:
         - containerPort: 80
