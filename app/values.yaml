@@ -84,17 +84,18 @@ readinessProbe:
     port: http
 
 # Additional volumes on the output Deployment definition.
-volumes: []
-# - name: foo
-#   secret:
-#     secretName: mysecret
-#     optional: false
+volumes: 
+ - name: nginx-conf
+   configMap:
+      name: nginx-conf
+      items:
+         - key: nginx.conf
+           path: nginx.conf
 
-# Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
+volumeMounts:
+   - mountPath: /etc/nginx
+     readOnly: true
+     name: nginx-conf
 
 nodeSelector: {}
 
