@@ -14,6 +14,7 @@ spec:
       labels:
         app: nginx-app
     spec:
+      imagePullPolicy: IfNotPresent
       containers:
       - name: course-site
         image: course-site
