@@ -17,6 +17,6 @@ spec:
       containers:
       - name: course-site
         imagePullPolicy: Never
-        image: course-site
+        image: course-site:latest
         ports:
         - containerPort: 80
